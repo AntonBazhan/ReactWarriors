@@ -1,0 +1,76 @@
+/* .btn-like{
+    background: blue;
+    color: white;
+}
+const movie = {
+    vote_average: 8.5,
+    title: "Avengers: Infinity War",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRcUPeWvsrL-m1NZYQhZd-4WEH5aCii6nooIq6B_xKPTX7I88t4&usqp=CAU",
+    poster_path: "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+    original_language: "en",
+    original_title: "Avengers: Infinity War",
+    backdrop_path: "/bOGkgRGdhrBYJSLpXaxhXVstddV.jpg",
+    adult: false,
+    overview:
+      "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+    release_date: "2018-04-25",
+  };
+  
+  function Image(props) {
+    return <img width="100%" src={props.src} alt={props.alt} />;
+  }
+  
+  class MovieItem extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        show: false,
+        like: false,
+      };
+    }
+  
+    toggleOverview = () => {
+      this.setState({
+        show: !this.state.show,
+      });
+    };
+    handleLike = () => {
+      this.setState({
+        like: !this.state.like,
+      });
+    };
+    render() {
+      const {
+        data: { title, vote_average, image, overview },
+      } = this.props;
+      return (
+        <div style={{ width: "300px" }}>
+          <Image src={image} alt={title} />
+          <p>{title}</p>
+          <p>{vote_average}</p>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <button type="button" onClick={this.toggleOverview}>
+              {this.state.show ? "hide" : "show"}
+            </button>
+            <button
+              type="button"
+              onClick={this.handleLike}
+              className={this.state.like ? "btn-like" : ""}
+             
+            >
+              Like
+            </button>
+          </div>
+          {this.state.show ? <p>{overview}</p> : null}
+        </div>
+      );
+    }
+  }
+  function App() {
+    return (
+      <div>
+        <MovieItem data={movie} />
+      </div>
+    );
+  } */
